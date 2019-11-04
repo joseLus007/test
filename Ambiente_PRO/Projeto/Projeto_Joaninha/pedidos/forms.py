@@ -1,5 +1,5 @@
 from django import forms
-from Projeto_Joaninha.pedidos.models import Pedidos
+from .models import Pedidos
 
 
 class PedidosForm(forms.ModelForm):
