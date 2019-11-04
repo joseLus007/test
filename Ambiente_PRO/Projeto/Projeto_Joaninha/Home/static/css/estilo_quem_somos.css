@@ -1,0 +1,112 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    /* background-image: url(../imagens/preto.jpg); */
+    background-color: #808080;
+}
+
+.menu{
+    max-width: 100%;
+	
+}
+header{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.609) ;
+    border-bottom:2px solid;
+    
+}
+header li{
+    display: inline-block;
+    margin: 20px 70px;
+}
+li :hover{
+    color:blanchedalmond;
+}
+header a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+#borda{
+    border: 5px solid rgba(0, 0, 0, 0.609) ;
+    padding-bottom: 2%;
+    margin-top: 50px;
+    background-image:url(../imagens/cinza.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    margin-right: 15%;
+    margin-left: 15%;
+    
+}
+#borda1{
+    border: 5px solid rgba(0, 0, 0, 0.609) ;
+    margin-top: -5px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-image:url(../imagens/cinza.jpg);
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size:100px;
+    animation: h1 1s infinite;
+}
+h2{
+    font-family:'Times New Roman', Times, serif;
+    font-size:50px;
+    color:white;
+}
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 45px;
+    font-size: 25px;
+    color: white;
+}
+#texto{
+    color: white;
+    font-family: cursive;
+    border:0px;
+    width: 50%;
+    height: 200px;
+    margin-top: 2%;
+}
+#imagens{
+    width: 50%;
+    height: 500px;
+    margin-block-start: 2%;
+    margin-left: 2%;
+    border-radius: 5%;
+
+    background-size: 100% 100%;
+    animation: imagens 20s infinite;
+    border: black 2px solid;	
+}
+@keyframes h1{
+    0%   {color: red;}
+    25%  {color: white;}
+    50%  {color: slateblue;}
+    100% {color: brown;}
+}
+@keyframes imagens{
+    0%, 16%{
+        background-image: url(../imagens/imagem-26.jpeg);
+    }
+    16%, 32%{
+        background-image: url(../imagens/imagem-27.jpeg);}
+    32%, 48%{
+        background-image: url(../imagens/imagem-28.jpeg);
+    }
+    48%, 64%{
+        background-image: url(../imagens/imagem-29.jpeg);
+    }
+    64%, 80%{
+        background-image: url(../imagens/imagem-30.jpeg);
+    }
+    80%, 100%{
+        background-image: url(../imagens/imagem-31.jpeg);
+    }
+}

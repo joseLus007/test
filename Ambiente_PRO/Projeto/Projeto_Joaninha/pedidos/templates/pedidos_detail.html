@@ -1,0 +1,41 @@
+{%extends 'base.html' %}
+{% block content %}
+    <a href="{%url 'pedidos:pedidos_list'% }"></a>
+    <h1>Cliente {{ object.nome_cliente }}
+        <span class="pull-right">
+            <a href="{% url 'pedidos:pedidos_list' %}">
+                <button type="button" class="btn btn-success"  >
+                    <span class="fa fa pencil"></span>Voltar
+                </button>
+            </a>
+        </span>
+    </h1>
+    <div class="col-sm-6">
+        <table class="table table-user-information">
+            <tbody>
+                <tr>
+                    <th class="text-right">Nome do Cliente</th>
+                    <td>{{ object.nome_cliente}}</td>
+                </tr>
+                <tr>
+                    <th class="text-right">E-mail</th>
+                    <td>{{ object.email }}</td>
+                </tr>
+                <tr>
+                    <th class="text-right">Pedido</th>
+                    <td>{{ object.lista_pedidos }}</td>
+                </tr>
+                <tr>
+                    <th class="text-right">Endereço</th>
+                    <td>{{ object.endereco }}</td>
+                </tr>
+                <tr>
+                    <th class="text-right">Numero de Contato</th>
+                    <td>{{ object.numero_contato }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,84 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-image: url(../imagens/preto.jpg);
+}
+
+.menu{
+    max-width: 100%;
+    margin: 0 auto;
+    padding:0 2%;
+	
+}
+header{
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.609) ;
+    border-bottom:2px solid;
+    
+}
+header li{
+    display: inline-block;
+    margin: 20px 70px;
+}
+li :hover{
+    color:blanchedalmond;
+}
+header a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+#borda{
+    border: 5px solid rgba(0, 0, 0, 0.609) ;
+    padding-bottom: 2%;
+    margin-top: 50px;
+    background-image:url(../imagens/cinza.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    margin-right: 15%;
+    margin-left: 15%;   
+}
+#borda1{
+    border: 5px solid rgba(0, 0, 0, 0.609) ;
+    margin-top: -5px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-image:url(../imagens/cinza.jpg);
+}
+.mapa{
+    margin-top:60px;
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size:100px;
+    animation: h1 1s infinite;
+}
+h2{
+    font-family:'Times New Roman', Times, serif;
+    font-size:50px;
+    color:white;
+}
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 45px;
+    font-size: 25px;
+    color: white;
+}
+p{
+    color: white;
+    font-family: cursive;
+}
+
+@keyframes h1{
+    0%   {color: red;}
+    25%  {color: white;}
+    50%  {color: slateblue;}
+    100% {color: brown;}
+}

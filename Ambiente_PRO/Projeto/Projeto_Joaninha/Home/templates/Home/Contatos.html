@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contato</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
+    <link rel="icon" type="imagem/png" href="{% static 'imagens/bob.png' %}"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/Contatos_css.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home:Home' %}">HOME</a></li>
+                    <li><a href="{% url 'home:CardapioEntrega' %}">CARDAPIO</a></li>
+                    <li><a href="{% url 'home:QuemSomos' %}">QUEM SOMOS</a></li>
+                    <li><a href="{% url 'home:Localizacao' %}">LOCALIZAÇÃO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="borda"><center><h1>Bom para comer</h1></center></div>
+        <div id= "borda1"><center><h2>Desde 2010</h2></center></div>
+        <center><h3>- VISITE -</h3>
+            <p>R. Serra do Araçaí, 177 - Jardim Maria Judite Itapevi - SP - 06657-630</p>
+            <div id ="parte"><p>Seg - Sex:08:00-20:00/Sáb:09:00-18:00/Fechado aos domingos</div></p></center>
+            <center>
+                <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29257.079210967626!2d-46.904738!3d-23.563598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf06e7a47c895f%3A0x595d00c1638713fa!2sR.%20Serra%20do%20Ara%C3%A7a%C3%AD%2C%20177%20-%20Jardim%20Maria%20Judite%2C%20Itapevi%20-%20SP%2C%2006657-630%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1572536473327!5m2!1spt-BR!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+            </center>
+            <center><h3>- CONTATO -</h3>
+                <p>WhatsApp: (11) 94774-4878</p>
+                <p>Carlos Eduardo da Silva Schendroski</p></center>    
+</body>
+</html>

@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/estilo_quem_somos.css'%}">
+    <title>Quem Somos</title>
+    <link rel="icon" href="{% static 'imagens/incone-32.gif'%}"/>
+    <link href="https://fonts.googleapis.com/css?family=Volkhov&display=swap" rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="{% static 'imagens/bob.png' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+        <script>
+                window.onload=function(){
+                    var div = document.getElementById('texto');
+                    var texto = "O estabelecimento teve origem em meados de 2010, o nome inicial era Lanchonete Torres, e assim ficou por um tempo, porém quando chegou a 2016 o nome mudou para Restaurante e Lanchonete Joaninha que foi devido a uma separação de donos. Com o passar do tempo a demanda de pedidos no estabelecimento foi crescendo gradativamente, de 20 pedidos atendidos. Hoje, em dia de alta rotatividade chega ao passar da casa dos 100 pedidos. Como os pedidos são feitos via facebook,WhatsApp e verbalmente no estabelecimento. Bom Apetite! Carlos Eduardo da Silva Schendroski."  
+                    function escrever(str, el) {
+                    var char = str.split('').reverse();
+                    var typer = setInterval(function(){
+                        if (!char.length) return clearInterval(typer);
+                        var next = char.pop();
+                        el.innerHTML += next;
+                        }, 10);
+                    }
+                    escrever(texto, div);
+                }
+            </script> 
+    <header>
+        <div class="menu"> 
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home:Home' %}">HOME</a></li>
+                    <li><a href="{% url 'home:CardapioEntrega' %}">CARDAPIO</a></li>
+                    <li><a href="{% url 'home:QuemSomos'%}">QUEM SOMOS</a></li>
+                    <li><a href="{% url 'home:Localizacao' %}">LOCALIZAÇÃO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="borda"><center><h1>Bom para comer</h1></center></div>
+    <div id= "borda1"><center><h2>Desde 2010</h2></center></div>
+    <center><h3>- SOBRE -</h3>
+        <p id="imagens"></p>
+        <p id="texto">
+    </center>
+</body>
+</html>
