@@ -41,6 +41,6 @@ typed-ast==1.4.0
 urllib3==1.24.1
 virtualenv==16.6.2
 virtualenvwrapper-win==1.2.5
-Werkzeug==0.15.2
+Werkzeug==0.15.3
 wrap-connection==1.0.0.2
 wrapt==1.11.2
