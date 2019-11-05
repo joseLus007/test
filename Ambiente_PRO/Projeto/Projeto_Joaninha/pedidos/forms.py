@@ -1,8 +1,9 @@
-from django import forms
+from django.forms import ModelForm
 from .models import Pedidos
 
 
-class PedidosForm(forms.ModelForm):
+class PedidosForm(ModelForm):
     class Meta:
         models=Pedidos
         fields="__all__"
+
