@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Pedidos
 from django.views.generic import CreateView
-from Projeto_Joaninha.Home.templates import CardapioEntrega
+from .forms import PedidosForm
 
 
 def pedidos_list(request):
@@ -20,9 +20,7 @@ def pedidos_add(request):
     template_name='CardapioEntrega.html'
     return render (request,template_name)
 
-
-
-# class PedidosCreate(CreateView):
-#     model=Pedidos
-#     template_name='CardapioEntrega.html'
-#     form_class=PedidosForm
+class PedidosCreate(CreateView):
+    model=Pedidos
+    template_name='CardapioEntrega.html'
+    form_class=PedidosForm
