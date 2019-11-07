@@ -1,35 +1,34 @@
-
-
-{% load widget_tweaks %}
-
-{% block css %}
-<style>
-    span.required:after{
-        content:"*";
-        color: blue;
-    }
-    
-</style>
-{% endblock css %}
-
-{% block content %}
-<form method="POST" novalidate>
-    {% csrf_token %}
-    {% for field in form.visible_fields %}
-    <div class="form-group{% if field.errors %} has-error {% endif%}">
-        <label for="{{ field.id_for_label }}">
-        {% if field.field.required %}
-            <span class="required">{{ field.label }} </span>
-            {% else %}
-                {{ field.label }}
-            {% endif %}
-        </label>
-        {% render_field field class="form-control" %}
-        {% for error in field.errors %}
-            <span class="text-muted">{{ error }}</span>
-        {% endfor %}
+<header>
+    <div class="menu"> 
+        <nav>
+            <ul>
+                <li><a href="{% url 'home:Home' %}">HOME</a></li>
+                <li><a href="{% url 'pedidos:pedidos_add' %}">CARDAPIO</a></li>
+                <li><a href="{% url 'home:QuemSomos' %}">QUEM SOMOS</a></li>
+                <li><a href="{% url 'home:Localizacao' %}">LOCALIZAÇÃO</a></li>
+            </ul>
+        </nav>
     </div>
-    {% endfor %}
-    <button type="submit" class="btn btn-success">Cadastrar</button>
+</header>
+{% load widget_tweaks %}
+{% block content %}
+<form method="POST">
+        {% csrf_token %}
+        <!-- {% for field in form.visible_fields %} -->
+          <div class="#">
+              {{ field.id_for_label }}
+            <label for="#">
+              {% if field.field.required %}
+                <span class="#">{{ field.label }} </span>
+              
+              {% endif %}
+            </label>
+            {% render_field field class="form-control" %}
+            
+              <span class="text-muted">{{ error }}</span>
+            
+          </div>
+        <!-- {% endfor %} -->
+        <button type="submit" class="#">Concluir</button>
 </form>
 {% endblock content %}
