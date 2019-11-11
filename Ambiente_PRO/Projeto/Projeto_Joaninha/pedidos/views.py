@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.views.generic import CreateView
 from .models import Pedidos
 from .forms import PedidosForm
+from django.urls import reverse_lazy
+
 
 # ::::::::::::::::::::::::::::
 
@@ -26,3 +28,4 @@ class PedidosCreate(CreateView):
     model=Pedidos
     template_name="CardapioEntrega.html"
     form_class=PedidosForm
+    success_url = reverse_lazy("home:Home")

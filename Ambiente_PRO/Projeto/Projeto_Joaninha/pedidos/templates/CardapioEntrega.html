@@ -11,24 +11,33 @@
     </div>
 </header>
 {% load widget_tweaks %}
-{% block content %}
-<form method="POST">
-        {% csrf_token %}
-        <!-- {% for field in form.visible_fields %} -->
-          <div class="#">
-              {{ field.id_for_label }}
-            <label for="#">
-              {% if field.field.required %}
-                <span class="#">{{ field.label }} </span>
-              
-              {% endif %}
-            </label>
-            {% render_field field class="form-control" %}
-            
-              <span class="text-muted">{{ error }}</span>
-            
-          </div>
-        <!-- {% endfor %} -->
-        <button type="submit" class="#">Concluir</button>
+
+
+<form method="POST">{% csrf_token %}
+    <h1>Selecione uma ou mais opções para compra: </h1>
+    {{form.nome_cliente }}
+    {{form.email }}
+    {{form.lista_pedidos }}
+    {{form.endereco }}
+    {{form.numero_contato }}
+
+    
+    <button>Concluir</button>
+    
+        
+       
 </form>
-{% endblock content %}
+
+        
+        
+       
+       
+        
+        
+
+
+
+
+
+
+
