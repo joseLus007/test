@@ -20,12 +20,14 @@ def pedidos_detail(request,pk):
     context={'object':obj}
     return render(request,template_name,context)
 
-def pedidos_add(request):
-    template_name='CardapioEntrega.html'
-    return render (request,template_name)
 
-class PedidosCreate(CreateView):
-    model=Pedidos
-    template_name="CardapioEntrega.html"
-    form_class=PedidosForm
-    success_url = reverse_lazy("home:Home")
+
+def pedido_create_view(request):
+    form = PedidosForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        form = PedidosForm()
+    context = {
+        'form': form
+    }
+    return render(request, "CardapioEntrega.html", context)
